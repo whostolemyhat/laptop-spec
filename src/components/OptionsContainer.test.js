@@ -26,12 +26,12 @@ it('renders options', () => {
     expect(component.find('.component__title').text()).toEqual('Test');
     expect(component.find('.component-option__name').text()).toEqual('testOption');
     expect(component.find('.component-option__price').text()).toEqual('£2.50');
-
-    component.find('.clickable').simulate('click');
-    expect(props.actions.changeSelection).toHaveBeenCalled();
 });
 
 it('handles clicks', () => {
+    component.find('.clickable').simulate('click');
+    expect(props.actions.changeSelection).toHaveBeenCalled();
+
     component.find('.clickable').simulate('click');
     expect(props.actions.changeSelection).toHaveBeenCalledWith(props.laptop.Test.options[0]);
 });

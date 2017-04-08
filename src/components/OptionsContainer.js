@@ -69,4 +69,5 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
+// connect to Redux state
 export default connect(mapStateToProps, mapDispatchToProps)(Options);

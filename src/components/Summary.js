@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import SummaryOption from './SummaryOption';
 
 export class Summary extends React.Component {
+    handleBuy = e => {
+        console.log('handle buy button here');
+    }
+
     renderSelected (option, i) {
         return <SummaryOption name={ option.name } key={ `selected${ i }` } />
     }
@@ -31,7 +35,7 @@ export class Summary extends React.Component {
                     </ul>
                 </div>
                 <span className="summary-window__total">{ `Total: £${ total }` }</span>
-                <button className="buy-button clickable">Buy now</button>
+                <button className="buy-button clickable" onClick={ this.handleBuy }>Buy now</button>
             </div>
         );
     }

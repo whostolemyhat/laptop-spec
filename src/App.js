@@ -4,13 +4,10 @@ import Header from './components/Header';
 import Summary from './components/Summary';
 import Options from './components/OptionsContainer';
 
-import './App.css';
-
 class App extends React.Component {
     render() {
         return (
-            <div className="App">
-
+            <div>
                 <Header />
 
                 <div className="content">

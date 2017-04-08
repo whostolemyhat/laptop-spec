@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Header from './components/Header';
-import PeopleContainer from './components/PeopleContainer'
 import Summary from './components/Summary';
-import Options from './components/Options';
+import Options from './components/OptionsContainer';
 
 import './App.css';
 
@@ -11,7 +10,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-            <PeopleContainer />
+
                 <Header />
 
                 <div className="content">

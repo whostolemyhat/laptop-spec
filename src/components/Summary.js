@@ -1,23 +1,50 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-export default class Summary extends React.Component {
+import SummaryOption from './SummaryOption';
+
+export class Summary extends React.Component {
+    renderSelected (option, i) {
+        return <SummaryOption name={ option.name } key={ `selected${ i }` } />
+    }
+
     render () {
+        const selected = [];
+        let total = 0;
+
+        const keys = Object.keys(this.props.laptop);
+        keys.forEach(key => {
+
+            // bit naive, assumes there will always be a selected option and will crash if not
+            const selectedOption = this.props.laptop[key].options.filter(option => option.selected)[0];
+            selected.push(selectedOption);
+            total += selectedOption.price;
+        });
+
         return (
             <div className="summary-window rounded-grey-border">
                 <h2>Summary</h2>
                 <div className="summary-window__chosen-specs">
                     <ul className="chosen-specs__spec-list list--no-style">
-                        <li className="spec-list__spec">13" Retina</li>
-                        <li className="spec-list__spec">2.7GHz quad-core Intel Core i7 processor, Turbo Boost up to 3.6GHz</li>
-                        <li className="spec-list__spec">512GB PCIe-based SSD</li>
-                        <li className="spec-list__spec">8 GB 2133MHz memory</li>
-
-                        <li className="spec-list__spec">Radeon Pro 455 with 2GB memory</li>
+                        { selected.map(this.renderSelected) }
                     </ul>
                 </div>
-                <span className="summary-window__total">Total: £1500</span>
+                <span className="summary-window__total">{ `Total: £${ total }` }</span>
                 <button className="buy-button clickable">Buy now</button>
             </div>
         );
     }
 }
+
+Summary.propTypes = {
+    laptop: PropTypes.object
+}
+
+function mapStateToProps(state, props) {
+  return {
+    laptop: state.laptop
+  };
+}
+
+export default connect(mapStateToProps)(Summary);

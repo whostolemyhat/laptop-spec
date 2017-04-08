@@ -1,71 +1,88 @@
-[
-    {
-        "name": "Screen",
+{
+    "Screen": {
         "options": [
             {
                 "name": "13\" Retina",
-                "price": 400
+                "price": 400,
+                "selected": true,
+                "section": "Screen"
             },
             {
                 "name": "15\" Retina",
-                "price": 700
+                "price": 700,
+                "selected": false,
+                "section": "Screen"
             }
         ]
     },
-    {
-        "name": "CPU",
+    "CPU": {
         "options": [
             {
                 "name": "2.7GHz quad-core Intel Core i7 processor, Turbo Boost up to 3.6GHz",
-                "price": 300
+                "price": 300,
+                "selected": true,
+                "section": "CPU"
             },
             {
                 "name": "2.9GHz quad-core Intel Core i7 processor, Turbo Boost up to 3.8GHz",
-                "price": 500
+                "price": 500,
+                "selected": false,
+                "section": "CPU"
             }
         ]
     },
-    {
-        "name": "Storage",
+    "Storage": {
         "options": [
             {
                 "name": "512GB PCIe-based SSD",
-                "price": 100
+                "price": 100,
+                "selected": true,
+                "section": "Storage"
             },
             {
                 "name": "1TB PCIe-based SSD",
-                "price": 200
+                "price": 200,
+                "selected": false,
+                "section": "Storage"
             },
             {
                 "name": "2TB PCIe-based SSD",
-                "price": 250
+                "price": 250,
+                "selected": false,
+                "section": "Storage"
             }
         ]
     },
-    {
-        "name": "Memory",
+    "Memory": {
         "options": [
             {
                 "name": "8 GB 2133MHz memory",
-                "price": 100
+                "price": 100,
+                "selected": true,
+                "section": "Memory"
             },
             {
                 "name": "16 GB 2133MHz memory",
-                "price": 150
+                "price": 150,
+                "selected": false,
+                "section": "Memory"
             }
         ]
     },
-    {
-        "name": "Graphics",
+    "Graphics": {
         "options": [
             {
                 "name": "Radeon Pro 455 with 2GB memory",
-                "price": 300
+                "price": 300,
+                "selected": true,
+                "section": "Graphics"
             },
             {
                 "name": "Radeon Pro 460 with 4GB memory",
-                "price": 400
+                "price": 400,
+                "selected": false,
+                "section": "Graphics"
             }
         ]
     }
-]
+}

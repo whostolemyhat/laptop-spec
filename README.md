@@ -16,6 +16,7 @@ Source code is in `/src` folder, most components in `/components`, entry in `/sr
 Data is hardcoded in `/data/options.json` - this is loaded into Redux state in `/reducers/laptop-reducer.js`, so could be edited at this point to load from local storage/network using a thunk function.
 
 Tests are run with Jest (default from `create-react-app`) via `npm test`.
+Tests are at the same level as the files they test.
 
 ## Other
 Original version seems to have incorrect total (£1500 vs £1200)?
